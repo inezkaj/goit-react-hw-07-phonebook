@@ -7,7 +7,6 @@ const Contact = ({ contact }) => {
   const dispatch = useDispatch();
 
   const handleRemove = () => {
-    console.log(`${contact.id}`);
     dispatch(removeContact(contact.id));
   };
 

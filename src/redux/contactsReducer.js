@@ -37,8 +37,8 @@ export const contactsSlice = createSlice({
       .addCase(addContact.rejected, rejected)
       .addCase(addContact.fulfilled, (state, action) => {
         state.isLoading = false;
-        const { name, phone } = action.payload;
-        state.contacts = [...state.contacts, { name, phone }];
+        const { name, phone, id } = action.payload;
+        state.contacts = [...state.contacts, { name, phone, id }];
       })
       .addCase(removeContact.pending, pending)
       .addCase(removeContact.rejected, rejected)
